@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Valentine 💖</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- ✅ CSS goes here -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
@@ -14,9 +16,11 @@
       <button id="yesBtn">Yes ❤️</button>
       <button id="noBtn">No 💔</button>
     </div>
+
     <p id="message"></p>
   </div>
 
-  <script src="script.js"></script>
+  <!-- ✅ JS goes here -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
