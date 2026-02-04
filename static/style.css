@@ -1,0 +1,50 @@
+/* ===== Valentine Page Base Styles ===== */
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #ff3366;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  position: relative;
+  height: 100px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#yesBtn {
+  background-color: #ff3366;
+  color: white;
+}
+
+#noBtn {
+  background-color: #999;
+  color: white;
+  position: absolute;
+}
