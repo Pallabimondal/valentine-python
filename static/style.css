@@ -48,3 +48,15 @@ button {
   color: white;
   position: absolute;
 }
+#photoGallery {
+  margin-top: 20px;
+}
+
+.photo {
+  width: 150px;
+  height: auto;
+  margin: 10px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
