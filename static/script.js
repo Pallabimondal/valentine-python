@@ -18,9 +18,23 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // YES button click action
-  yesBtn.addEventListener("click", () => {
-    message.innerHTML = "💖 Yay! I knew you’d say YES! 💖";
-    message.style.fontSize = "20px";
-    message.style.color = "#ff3366";
+  document.addEventListener("DOMContentLoaded", () => {
+  const yesBtn = document.getElementById("yesBtn");
+  const noBtn = document.getElementById("noBtn");
+  const message = document.getElementById("message");
+  const gallery = document.getElementById("photoGallery");
+
+  noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * 200;
+    const y = Math.random() * 80;
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
   });
+
+  yesBtn.addEventListener("click", () => {
+    message.innerHTML = "💖 You made my day! 💖";
+    gallery.style.display = "block";
+  });
+});
+
 });
