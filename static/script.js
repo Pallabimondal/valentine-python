@@ -16,8 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
-    noBtn.style.right = x + "px";
-    noBtn.style.down = y + "px";
   });
 
   // YES button click → show images
