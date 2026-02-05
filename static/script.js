@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Move the NO button
   noBtn.addEventListener("mouseover", () => {
-    const x = Math.random() * 200;
-    const y = Math.random() * 80;
+    const x = Math.random() * 400;
+    const y = Math.random() * 400;
 
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
