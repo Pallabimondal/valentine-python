@@ -3,9 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const yesBtn = document.getElementById("yesBtn");
   const message = document.getElementById("message");
   const gallery = document.getElementById("photoGallery");
+  const title = document.getElementById("title");
 
   let currentIndex = 0;
   let images = [];
+  let heartInterval;
 
   if (!noBtn || !yesBtn) return;
 
@@ -21,33 +23,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // YES button click 💖
   yesBtn.addEventListener("click", () => {
-    message.innerHTML = "💖 You made my day! 💖";
+    // fade out title
+    title.classList.add("fade-out");
 
-      document.getElementById("title").style.display = "💖 He said YES 💖";
+    setTimeout(() => {
+      title.style.display = "none";
+      message.innerHTML = "💖 Yayyy! You made my heart smile 💖";
 
-    yesBtn.style.display = "none";
-    noBtn.style.display = "none";
+      yesBtn.style.display = "none";
+      noBtn.style.display = "none";
 
-    if (gallery) {
       gallery.style.display = "block";
+      gallery.classList.add("fade-in");
+
       images = gallery.querySelectorAll("img");
       startSlideshow();
-    }
+      startHearts();
+    }, 500);
   });
 
+  // Slideshow logic
   function startSlideshow() {
     if (images.length === 0) return;
 
-    // hide all images first
     images.forEach(img => (img.style.display = "none"));
-
-    // show first image
     images[currentIndex].style.display = "block";
 
     setInterval(() => {
       images[currentIndex].style.display = "none";
       currentIndex = (currentIndex + 1) % images.length;
       images[currentIndex].style.display = "block";
-    }, 2000); // change every 2 sec
+    }, 2000);
+  }
+
+  // Floating hearts 💖
+  function startHearts() {
+    heartInterval = setInterval(() => {
+      const heart = document.createElement("div");
+      heart.innerHTML = "💖";
+      heart.className = "heart";
+      heart.style.left = Math.random() * 100 + "vw";
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 4000);
+    }, 400);
   }
 });
