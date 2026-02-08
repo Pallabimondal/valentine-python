@@ -56,14 +56,15 @@ button:hover {
   background-color: #ff3366;
   color: white;
   position: relative;
-  z-index: 2;  
+  z-index: 2;
 }
 
 #noBtn {
   background-color: #999;
   color: white;
   position: absolute;
-  left: 160px;  
+  left: 180px;
+  top: 0;
   z-index: 1;
 }
 /* Gallery */
