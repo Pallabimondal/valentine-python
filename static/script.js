@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
   yesBtn.addEventListener("click", () => {
     message.innerHTML = "💖 You made my day! 💖";
 
+      document.getElementById("title").style.display = "💖 He said YES 💖";
+
     yesBtn.style.display = "none";
     noBtn.style.display = "none";
 
