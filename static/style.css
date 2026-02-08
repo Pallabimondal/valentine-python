@@ -34,8 +34,9 @@ h1 {
 
 /* Buttons */
 .buttons {
-  position: relative;
-  height: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
   margin-top: 20px;
 }
 
@@ -55,17 +56,11 @@ button:hover {
 #yesBtn {
   background-color: #ff3366;
   color: white;
-  position: relative;
-  z-index: 2;
 }
 
 #noBtn {
   background-color: #999;
   color: white;
-  position: absolute;
-  left: 180px;
-  top: 0;
-  z-index: 1;
 }
 /* Gallery */
 #photoGallery {
