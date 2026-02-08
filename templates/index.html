@@ -8,11 +8,14 @@
 
 <body>
   <div class="container">
-    <h1>💘 Will you be my Valentine? 💘</h1>
 
+    <!-- ✅ FIX: added id="title" -->
+    <h1 id="title">💘 Will you be my Valentine? 💘</h1>
+
+    <!-- ✅ FIX: clean button structure -->
     <div class="buttons">
-      <button id="yesBtn">Yes ❤️</button>
-      <button id="noBtn">No 💔</button>
+      <button id="yesBtn" type="button">Yes ❤️</button>
+      <button id="noBtn" type="button">No 💔</button>
     </div>
 
     <!-- Message -->
@@ -25,8 +28,10 @@
       <img src="{{ url_for('static', filename='image2.jpg') }}" class="photo">
       <img src="{{ url_for('static', filename='love.jpg') }}" class="photo">
     </div>
+
   </div>
 
+  <!-- ✅ Script loaded AFTER HTML -->
   <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
