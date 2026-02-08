@@ -55,14 +55,17 @@ button:hover {
 #yesBtn {
   background-color: #ff3366;
   color: white;
+  position: relative;
+  z-index: 2;  
 }
 
 #noBtn {
   background-color: #999;
   color: white;
   position: absolute;
+  left: 160px;  
+  z-index: 1;
 }
-
 /* Gallery */
 #photoGallery {
   margin-top: 20px;
