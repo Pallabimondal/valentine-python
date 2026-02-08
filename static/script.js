@@ -1,11 +1,12 @@
-// ===== Valentine Button Logic =====
 document.addEventListener("DOMContentLoaded", () => {
   const noBtn = document.getElementById("noBtn");
   const yesBtn = document.getElementById("yesBtn");
   const message = document.getElementById("message");
   const gallery = document.getElementById("photoGallery");
 
-  // safety check
+  let currentIndex = 0;
+  let images = [];
+
   if (!noBtn || !yesBtn) return;
 
   // NO button runs away 😜
@@ -22,13 +23,29 @@ document.addEventListener("DOMContentLoaded", () => {
   yesBtn.addEventListener("click", () => {
     message.innerHTML = "💖 You made my day! 💖";
 
-    // hide both buttons
     yesBtn.style.display = "none";
     noBtn.style.display = "none";
 
-    // show gallery
     if (gallery) {
       gallery.style.display = "block";
+      images = gallery.querySelectorAll("img");
+      startSlideshow();
     }
   });
+
+  function startSlideshow() {
+    if (images.length === 0) return;
+
+    // hide all images first
+    images.forEach(img => (img.style.display = "none"));
+
+    // show first image
+    images[currentIndex].style.display = "block";
+
+    setInterval(() => {
+      images[currentIndex].style.display = "none";
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].style.display = "block";
+    }, 2000); // change every 2 sec
+  }
 });
