@@ -49,10 +49,15 @@ button {
   position: absolute;
 }
 
-<div id="photoGallery" style="display:none;">
-  <img src="image1.jpg">
-  <img src="image2.jpg">
-  <img src="love.jpg">
-</div>
+/* Gallery images size control */
+#photoGallery {
+  margin-top: 20px;
+}
 
-
+#photoGallery img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: none; /* important for slideshow */
+}
